@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* PRIMEIRA TELA */
+
+.tela-inicial {
+    width: 100vw;
+    height: 100vh;
+
+    background: #ffdce8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* SEGUNDA TELA */
+
+.tela-segunda {
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #ffdce8,
+        #fff0f5
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* BOTÃO */
+
+.botao {
+    background: #ff6f9c;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 18px 35px;
+
+    border-radius: 30px;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.botao:hover {
+    transform: scale(1.08);
+
+    background: #ff4f88;
+}
+
+
+/* ESCONDE O CHECKBOX */
+
+#abrir {
+    display: none;
+}
+
+
+/* MENSAGEM */
+
+.mensagem {
+    display: none;
+
+    text-align: center;
+
+    color: #d6336c;
+
+    z-index: 10;
+}
+
+.mensagem h1 {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.mensagem p {
+    font-size: 22px;
+
+    color: #8f405b;
+}
+
+
+/* QUANDO CLICAR */
+
+#abrir:checked ~ .botao {
+    display: none;
+}
+
+#abrir:checked ~ .mensagem {
+    display: block;
+}
